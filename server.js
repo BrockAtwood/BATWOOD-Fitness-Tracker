@@ -11,8 +11,8 @@ const app = express();
 //PORT boiler for heroku later, from previous activity #25/#26
 const PORT = process.env.PORT || 3131;
 
-//Unit 18, Activity #15
-const db = require("./models");
+//Unit 18, Activity #15 (not needed)
+// const db = require("../models");
 
 //Middleare for morgan dependency
 app.use(logger("dev"));

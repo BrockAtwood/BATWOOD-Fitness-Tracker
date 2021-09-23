@@ -2,6 +2,9 @@
 const router = require("express").Router();
 const db = require("../models");
 
+//adding connection to Workout model
+const { Workout } = require("../models");
+
 //get routes for workouts
 router.get("/api/workouts", (req, res) => {
   db.Workout.find({})
