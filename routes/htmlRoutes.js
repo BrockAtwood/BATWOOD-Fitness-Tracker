@@ -20,4 +20,4 @@ router.get("/stats", (req, res) => {
 });
 
 //exporting module
-module.exports = rouuter;
+module.exports = router;
