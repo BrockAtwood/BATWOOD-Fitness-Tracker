@@ -6,7 +6,7 @@ const db = require("../models");
 router.get("/api/workouts", function (req, res) {
   db.Workout.find({})
     .then((dbWorkout) => {
-      //console.log("dbWorkouts")
+      // console.log("Look here Brock" + dbWorkout);
       res.json(dbWorkout);
     })
     .catch((err) => {
@@ -48,7 +48,7 @@ router.put("/api/workouts/:id", function (req, res) {
 });
 
 //getting workouts in range
-app.get("/api/workouts/range", async (req, res) => {
+router.get("/api/workouts/range", async (req, res) => {
   try {
     const allWorkouts = await db.Workout.aggregate([
       {

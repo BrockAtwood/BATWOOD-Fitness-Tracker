@@ -22,15 +22,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/batwoodworkoutdb",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  }
-);
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
 //required routes (WHICH I FORGOT AND STUGGLED TO FIND MY ERROR)
 app.use(require("./routes/apiRoutes"));
