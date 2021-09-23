@@ -8,45 +8,55 @@ const Schema = mongoose.Schema;
 //Given Day
 //Schema tracking - name, type, weight, sets, reps, and duration of exercise.
 //If cardio exercise -- track distance traveled
-const workoutSchema = new Schema({
-  day: {
-    type: Date,
-    default: Date.now,
-  },
-  exercise: [
-    {
-      type: {
-        type: String,
-        trim: true,
-        required: true,
-      },
-      name: {
-        type: String,
-        trim: true,
-        required: true,
-      },
-      duration: {
-        type: Number,
-        trim: true,
-        required: true,
-      },
-      weight: {
-        type: Number,
-      },
-      reps: {
-        type: Number,
-      },
-      sets: {
-        type: Number,
-      },
-      distance: {
-        type: Number,
-      },
+const workoutSchema = new Schema(
+  {
+    day: {
+      type: Date,
+      default: Date.now,
     },
-  ],
-  totalDuration: {
-    type: Number,
+    exercise: [
+      {
+        type: {
+          type: String,
+          trim: true,
+          required: true,
+        },
+        name: {
+          type: String,
+          trim: true,
+          required: true,
+        },
+        duration: {
+          type: Number,
+          trim: true,
+          required: true,
+        },
+        weight: {
+          type: Number,
+        },
+        reps: {
+          type: Number,
+        },
+        sets: {
+          type: Number,
+        },
+        distance: {
+          type: Number,
+        },
+      },
+    ],
   },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
+//to get total duration
+WorkoutSchema.virtual("totalDuration").get(function () {
+  return this.exercises.reduce((total, exercise) => {
+    return total + exercise.duration;
+  }, 0);
 });
 
 //Mongoose model
