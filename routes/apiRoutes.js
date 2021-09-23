@@ -27,7 +27,7 @@ router.post("/api/workouts", ({ body }, res) => {
 });
 
 //adding an exercise to workouts by ID (unit 13 Act #12)
-router.put("/api/workuots/:id", (req, res) => {
+router.put("/api/workouts/:id", (req, res) => {
   //console.log("updating")
   db.Workout.findOneAndUpdate(
     {

@@ -22,6 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populatedb", {
+  useNewUrlParser: true,
+});
+
 //app listener for connection
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
