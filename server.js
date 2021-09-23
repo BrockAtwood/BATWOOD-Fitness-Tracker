@@ -32,6 +32,10 @@ mongoose.connect(
   }
 );
 
+//required routes (WHICH I FORGOT AND STUGGLED TO FIND MY ERROR)
+app.use(require("./routes/apiRoutes"));
+app.use(require("./routes/htmlRoutes"));
+
 //app listener for connection
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}`);
