@@ -1,3 +1,4 @@
+//adding comment - per/Ben about changing the w to a captial W
 //Activity #13 & #15
 
 //requiring mongoose and schema
