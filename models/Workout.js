@@ -15,7 +15,7 @@ const workoutSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-    exercise: [
+    exercises: [
       {
         type: {
           type: String,
@@ -55,9 +55,10 @@ const workoutSchema = new Schema(
 );
 //to get total duration
 workoutSchema.virtual("totalDuration").get(function () {
-  return this.exercises.reduce((total, exercise) => {
+  const duration = this.exercises.reduce((total, exercise) => {
     return total + exercise.duration;
   }, 0);
+  return duration;
 });
 
 //Mongoose model
