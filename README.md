@@ -36,6 +36,16 @@ The user is able to:
 
 ## ScreenShots:
 
+- Picture #1:
+![Screen Shot 2021-09-23 at 6 34 58 PM](https://user-images.githubusercontent.com/87385012/134715890-e0462435-7c2b-4a08-b326-26d2106a3f36.png)
+
+- Picture #2:
+![Screen Shot 2021-09-23 at 6 35 32 PM](https://user-images.githubusercontent.com/87385012/134715943-8d283294-de4c-4c23-827e-11bbaf369335.png)
+
+- Picture #3:
+![Screen Shot 2021-09-24 at 10 26 47 AM](https://user-images.githubusercontent.com/87385012/134715953-9d6c1a26-6338-444a-9013-30cc7452cf69.png)
+
+
 ## Application Links:
 
 - URL to the Deployed Application - https://serene-sands-75725.herokuapp.com/
