@@ -42,6 +42,6 @@ The user is able to:
 
 - URL to the GitHub repository - https://github.com/BrockAtwood/BATWOOD-Fitness-Tracker
 
-## Questions:
+## Questions for the Author:
 
-Please Email me @ brockatwood@gmail.com
+Brock Atwood - If you have any questions, you can Email me @ brockatwood@gmail.com. You can also view my other projects at my GiHub @ https://github.com/BrockAtwood
